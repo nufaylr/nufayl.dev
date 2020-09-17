@@ -64,9 +64,27 @@ const Footer = () => {
 				</div>
 			</div>
 			<div style={copyright}>
-				© {new Date().getFullYear()}, Built with
-				{` `}
-				<a href="https://www.gatsbyjs.org">Gatsby</a>
+				The site was built with{` `}
+				<a
+					href="https://www.gatsbyjs.org"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Gatsby
+				</a>
+				. It is hosted by{" "}
+				<a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">
+					Vercel
+				</a>
+				, and the source code is{" "}
+				<a
+					href="https://github.com/nufaylr/nufayl.dev"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					here
+				</a>
+				.
 			</div>
 		</footer>
 	)
