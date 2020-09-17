@@ -14,6 +14,9 @@ const SEO = ({ description, lang, meta, type, title }) => {
             social {
               twitter
             }
+            author {
+              name
+            }
           }
         }
       }
@@ -23,8 +26,8 @@ const SEO = ({ description, lang, meta, type, title }) => {
   const metaDescription = description || site.siteMetadata.description
   const pageTitle =
     type === "home"
-      ? `${site.siteMetadata.title} - %s`
-      : `%s - ${site.siteMetadata.title} - full-stack web developer`
+      ? `${site.siteMetadata.author.name} - %s`
+      : `%s - ${site.siteMetadata.author.name} - ${site.siteMetadata.description}`
 
   return (
     <Helmet

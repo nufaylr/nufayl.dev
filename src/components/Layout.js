@@ -24,20 +24,31 @@ const componentStyle = {
     marginBottom: 0,
     marginTop: 0,
   },
+  srOnly: {
+    position: `absolute`,
+    left: `-10000px`,
+    top: `auto`,
+    width: `1px`,
+    height: `1px`,
+    overflow: `hidden`,
+  },
 }
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const { continer, layoutHeader, layoutHeaderLink } = componentStyle
+  const { continer, layoutHeader, layoutHeaderLink, srOnly } = componentStyle
   return (
     <div style={continer}>
       <header style={layoutHeader}>
+        <h1 style={srOnly}>{title}</h1>
         {location.pathname === rootPath ? (
           <Bio />
         ) : (
-          <Link style={layoutHeaderLink} to={`/`}>
-            Retrun back to home
-          </Link>
+          <nav aria-label="Main menue" role="navigation">
+            <Link style={layoutHeaderLink} to={`/`}>
+              Retrun back to home
+            </Link>
+          </nav>
         )}
       </header>
       <main>{children}</main>

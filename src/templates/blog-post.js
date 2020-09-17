@@ -47,7 +47,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </footer>
       </article>
 
-      <nav>
+      <nav aria-label="More articles" role="navigation">
         <ul
           style={{
             display: `flex`,
