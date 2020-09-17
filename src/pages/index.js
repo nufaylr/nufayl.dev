@@ -20,6 +20,7 @@ const componentStyle = {
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const siteDescription = data.site.siteMetadata.description
   const posts = data.allMarkdownRemark.edges
   const {
     blogIndexHeader,
@@ -27,11 +28,12 @@ const BlogIndex = ({ data, location }) => {
     postArticleTitle,
     postArticleTitleLink,
   } = componentStyle
+
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Full-stack web developer" type="home" />
+      <SEO title={siteDescription} type="home" />
       <header style={blogIndexHeader}>
-        <h1>Recent Posts</h1>
+        <h2>Recent Posts</h2>
         <p>My latest blog posts can be found here.</p>
       </header>
       {posts.map(({ node }) => {
@@ -67,6 +69,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
