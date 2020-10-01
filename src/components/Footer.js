@@ -32,7 +32,11 @@ const Footer = () => {
 		<footer>
 			<div style={container}>
 				<div style={rssBlock}>
-					<a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+					<a
+						href="/rss.xml"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						RSS
 					</a>
 				</div>
@@ -73,7 +77,11 @@ const Footer = () => {
 					Gatsby
 				</a>
 				. It is hosted by{" "}
-				<a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">
+				<a
+					href="https://vercel.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					Vercel
 				</a>
 				, and the source code is{" "}
