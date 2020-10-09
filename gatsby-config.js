@@ -3,7 +3,7 @@ module.exports = {
     title: `Hi, I’m Nufayl Razick.`,
     author: {
       name: `Nufayl Razick`,
-      summary: `I’m Nufayl Razick. I’m a full-stack web developer and tech enthusiast. Passionate about learning and sharing. I am interested in building things, web technologies, open source, web accessibility(a11y), and many other things.`,
+      summary: `I’m Nufayl Razick. I’m a software developer developer. Passionate about learning and sharing. I am interested in building things, web technologies and open source.`,
     },
     description: `Full-stack web developer`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
